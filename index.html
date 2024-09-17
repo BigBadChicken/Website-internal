@@ -14,8 +14,6 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#importance">Importance</a></li>
-                <li><a href="#types">Types of Bees</a></li>
-                <li><a href="#conservation">Conservation</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -29,29 +27,45 @@
                 <p>Discover the amazing life of bees and the important role they play in our world.</p>
             </div>
         </div>
-    </section>
-
-    <!-- Overview of Bees -->
-    <section id="about">
-        <div class="content">
-            <h2>About Bees</h2>
-            <p>Bees are essential pollinators, playing a critical role in our ecosystems and agriculture.</p>
-            <p>There are over 20,000 species of bees worldwide, each with unique characteristics and roles.</p>
+        
+        <!-- Bee Photos Section -->
+        <div class="bee-photos">
+            <img src="img/1328127.jpg" alt="Bee photo" class="bee-photo">
+            <img src="img/pexels-sarazhizmailov-13086553.jpg" alt="Bee photo 2" class="bee-photo">
+            <img src="img/2556130.jpg" alt="Bee photo 3" class="bee-photo">
         </div>
+        <!-- Fullscreen Modal -->
+<div id="beeModal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
     </section>
-
-    <!-- Importance of Bees -->
-    <section id="importance">
-        <div class="content">
-            <h2>Importance of Bees</h2>
-            <p>Bees are vital for pollinating many of the crops we rely on for food. Without bees, our food supply would be greatly diminished.</p>
-            <p>They also contribute to the biodiversity of plants and help maintain the balance of our natural environments.</p>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
-        <p>© 2069 The World of the Skibidi Bees. All rights really not reserved.</p>
+        <p>© 2024 The World of the Skibidi Bees. All rights not reserved.</p>
     </footer>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("beeModal");
+    
+        // Get the image and insert it inside the modal - use its "src" as the modal content
+        var modalImg = document.getElementById("modalImage");
+        var beePhotos = document.querySelectorAll(".bee-photo");
+    
+        beePhotos.forEach(function(photo) {
+            photo.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        });
+    
+        // Get the <span> element that closes the modal
+        var closeModal = document.getElementsByClassName("modal-close")[0];
+    
+        // When the user clicks on <span> (x), close the modal
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>    
 </body>
 </html>

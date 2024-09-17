@@ -1,4 +1,4 @@
-body {
+body { 
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #fff;
@@ -68,12 +68,6 @@ section {
     text-align: center;
 }
 
-section h2 {
-    font-size: 36px;
-    color: #ffb400; /* Yellow/Orange accent */
-    margin-bottom: 20px;
-}
-
 section p {
     font-size: 18px;
     color: black;
@@ -96,6 +90,72 @@ img {
     height: auto;
     display: block;
     margin: 0 auto; /* Center the image */
+}
+
+/* Bee Photos Section */
+.bee-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 40px 20px;
+    justify-items: center; /* Centers photos horizontally */
+    background-color: #f9f9f9; /* Light background to contrast with the images */
+}
+
+.bee-photo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer; /* Changes cursor to indicate interactivity */
+}
+
+.bee-photo:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Fullscreen Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 9999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+}
+
+.modal-content:hover {
+    transform: none; /* Disable the zoom effect on the enlarged image */
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Responsive Design */
