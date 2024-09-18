@@ -1,4 +1,4 @@
-body { 
+body {  
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #fff;
@@ -58,8 +58,9 @@ header nav ul li a:hover {
 }
 
 .hero-text p {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 30px;
+    font-style: italic;
 }
 
 /* Content Section Styles */
@@ -175,9 +176,75 @@ img {
 
     section h2 {
         font-size: 28px;
+        color: #000;
+        font-weight: bold;
+    }
+
+    section h3 {
+        font-size: 18px;
+        color: #000;
     }
 
     section p {
         font-size: 16px;
+        line-height: 1.8; /* Slightly increased to provide better readability */
     }
+
+}
+/* Bee Photos Section */
+.interactive-gallery {
+    padding: 20px;
+    text-align: center;
+}
+
+.interactive-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.interactive-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Fullscreen Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 9999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
