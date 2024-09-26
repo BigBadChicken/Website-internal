@@ -3,31 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bee Conservation - Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Welcome to the World of Bees</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Bees</a></li>
-                <li><a href="importance.html">Importance</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT BEES</a></li>
+                <li><a href="importance.html">IMPORTANCE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Welcome to the World of Bees</h1>
-            <p>Discover their importance and how they keep our planet thriving.</p>
-            <a href="about.html" class="btn">Learn More</a>
+
+    <!-- Home Section with Parallax Effect -->
+    <section id="home">
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>Welcome to the World of Bees</h1>
+                <p>Discover the amazing life of bees and the important role they play in our world. Bees play a vital role in maintaining biodiversity and supporting agriculture through pollination. With over 20,000 species worldwide, bees are responsible for pollinating a significant portion of the crops we eat, as well as wild plants. These hardworking insects live in colonies with a structured society, where each bee has a specific role. Their survival is crucial for food production and the health of ecosystems, making them essential to our planet's future.</p>
+            </div>
         </div>
+        
+        <!-- Bee Photos Section -->
+        <div class="bee-photos">
+            <img src="img/1328127.jpg" alt="Bee photo" class="bee-photo">
+            <img src="img/pexels-sarazhizmailov-13086553.jpg" alt="Bee photo 2" class="bee-photo">
+            <img src="img/2556130.jpg" alt="Bee photo 3" class="bee-photo">
+        </div>
+        <!-- Fullscreen Modal -->
+<div id="beeModal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
     </section>
-    
+    <!-- Footer -->
     <footer>
-        <p>© 2024 Bee Conservation. All rights reserved.</p>
+        <p>© 2024 The World of the Skibidi Bees. All rights not reserved.</p>
     </footer>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("beeModal");
+    
+        // Get the image and insert it inside the modal - use its "src" as the modal content
+        var modalImg = document.getElementById("modalImage");
+        var beePhotos = document.querySelectorAll(".bee-photo");
+    
+        beePhotos.forEach(function(photo) {
+            photo.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        });
+    
+        // Get the <span> element that closes the modal
+        var closeModal = document.getElementsByClassName("modal-close")[0];
+    
+        // When the user clicks on <span> (x), close the modal
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>    
 </body>
 </html>
