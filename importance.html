@@ -4,102 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Importance of Bees</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Parallax Section Styles */
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            font-size: 24px;
-        }
-        /* Specific background for pollination section */
-        #pollination-parallax {
-            background-image: url('img/plantation image.webp');
-        }
-        /* Specific background for medicinal products section */
-        #medicinal-parallax {
-            background-image: url('img/909067.jpg');
-        }
-        /* Content Section */
-        .content {
-            padding: 40px;
-            text-align: center;
-        }
-        .content h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-        .content p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: black;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT BEES</a></li>
-                <li><a href="importance.html">IMPORTANCE</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Bees</a></li>
+                <li><a href="importance.html">Importance</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <!-- Parallax Pollination Section -->
-    <div id="pollination-parallax" class="parallax">
-        <div>
-            <h1>Pollination</h1>
-        </div>
-    </div>
-    <!-- Content: Pollination Details -->
+
     <section class="content">
-        <h2>How Bees Pollinate</h2>
-        <p>Bees are some of the most efficient pollinators in the world. As they travel from flower to flower collecting nectar, pollen from the flowers' anthers sticks to their fuzzy bodies. When they land on another flower, some of this pollen is transferred to the stigma, allowing plants to reproduce. This process of pollination is crucial for the growth of many crops and wild plants.</p>
-        <p>Approximately 75% of the world's food crops depend on pollination to some extent. Without bees, many fruits, vegetables, and nuts would become scarce and expensive. Bees are essential to maintaining biodiversity and ecosystems, as they help plants reproduce, providing food and habitats for other animals.</p>
+        <h2>Pollination</h2>
+        <p>Bees are the world’s most important pollinators for food crops. They contribute to plant reproduction, biodiversity, and food security.</p>
+        
+        <h2>Medicinal Use</h2>
+        <p>Bees produce honey, propolis, and royal jelly, which are used for medicinal purposes due to their healing properties.</p>
     </section>
-    <!-- Parallax Medicinal Products Section -->
-    <div id="medicinal-parallax" class="parallax">
-        <div>
-            <h1>Medicinal Use</h1>
-        </div>
-    </div>
-    <!-- Content: Medicinal Products Details -->
-    <section class="content">
-        <h2>Medicinal Products Produced by Bees</h2>
-        <p>In addition to their role as pollinators, bees produce several substances with medicinal properties. Honey has natural antibacterial and anti-inflammatory properties, making it effective in wound healing. Bees also produce propolis, a resin-like material with antiseptic and antioxidant properties, and royal jelly, which is believed to boost the immune system and improve skin health.</p>
-    </section>
-    <!-- Fullscreen Modal (if needed for other content) -->
-    <div id="beeModal" class="modal">
-        <span class="modal-close">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
-    <script>
-        // Modal functionality for image zoom and full screen
-        var modal = document.getElementById("beeModal");
-        var modalImg = document.getElementById("modalImage");
-        var interactiveImages = document.querySelectorAll(".interactive-image");
-        interactiveImages.forEach(function(image) {
-            image.onclick = function() {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-            }
-        });
-        var closeModal = document.getElementsByClassName("modal-close")[0];
-        closeModal.onclick = function() {
-            modal.style.display = "none";
-        }
-    </script>
+
+    <footer>
+        <p>© 2024 Bee Conservation. All rights reserved.</p>
+    </footer>
 </body>
 </html>
